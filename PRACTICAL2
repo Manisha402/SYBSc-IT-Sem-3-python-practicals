@@ -1,0 +1,45 @@
+#Write a function that takes a character and returns true isf it is a vowel ,false otherwise.
+def len(s):
+	count = 0
+	for i in s:
+		if i != ' ':
+			count += 1
+	return count
+	print('The total length of the string is: ', count)
+
+
+
+#Define  function that computes the length of agiven list or string.
+def Len(s):
+    counter = 0    
+    for i in s:
+        counter += 1
+    return counter
+  
+  
+s = "python programming"
+print("the length of the string is:- ")
+print(Len(s))
+
+
+#Define a procedure  histogram() that takes a list of intgers and print the histogram to the screen. 
+#For example , histogram ([4,9,7]) ssholud print the following.
+****
+********
+******
+
+def histogram(val):
+    for i in val:
+        print('*'*i)
+
+lst = []
+n = int(input("enter number of elements : "))
+for i in range(0, n):
+ ele = int(input())
+ lst.append(ele)
+histogram(lst)
+
+
+
+
+
