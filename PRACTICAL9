@@ -1,0 +1,35 @@
+###Try to configure the widget with various options like bg=”red”,family=”times”, size=”18”.
+
+import tkinter
+from tkinter import *
+ 
+window = tkinter.Tk()
+
+C = tkinter.Canvas(window, bg="red", height=250, width=300)
+C.pack()
+
+coord = 10, 50, 240, 210
+arc = C.create_arc(coord, start=0, extent=150, fill="red")
+ 
+# to rename the title of the window window.title("GUI")
+# pack is used to show the object in the window
+
+label = tkinter.Label(window, text = "Hello World!", font=("Arial Bold", 50)).pack()
+ 
+window.mainloop()
+
+
+
+###Try to change the widget type and configuration options to experiment
+#With other widget types like message, button, entry, checkbutton, radiobutton, scale,etc.
+
+#Message in Python
+import tkinter
+from tkinter import *
+root = Tk()
+var = StringVar()
+label = Message( root, textvariable=var, relief=RAISED )
+var.set("Hey!? How are you doing?")
+label.pack()
+root.mainloop()
+
