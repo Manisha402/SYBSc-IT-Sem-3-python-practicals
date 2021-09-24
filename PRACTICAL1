@@ -1,0 +1,124 @@
+###Create a program thar asks the user to enter their name and their age .
+#Print out a message addressed to them that tells them the year that they will turn 100 year old.
+import datetime
+name = input("hello! please enter your name: ")
+print("hello "  + name)
+age = int(input("enter your age: "))
+year_now = datetime.datetime.now()
+print(year_now.year)
+print("you will turn 100 in " + str(int(100-age)
+                    + int(year_now.year)))
+                    
+                    
+
+#To enter the number from the user and depending on whether the number is even or odd , print out an appropriate message to user.
+# even and odd numbers.
+num = int(input("enter a number: "))
+if (num % 2) == 0:
+ print("{0} is even".format(num))
+else:
+ print("{0} is odd".format(num))
+
+
+#Write a program to generate the fibonacci series .
+# Program to display the Fibonacci sequence up to n-th term where n is provided
+#by the user
+# change this value for a different result
+#nterms = 10
+# uncomment to take input from the user
+nterms = int(input("How many terms? "))
+# first two terms
+n1 = 0
+n2 = 1
+count = 2
+# check if the number of terms is valid
+if nterms<= 0:
+ print("Please enter a positive integer")
+elif nterms == 1:
+ print("Fibonacci sequence upto",nterms,":")
+ print(n1)
+else:
+ print("Fibonacci sequence upto",nterms,":")
+ print(n1,",",n2, end=' , ')
+ while count <nterms:
+     nth = n1 + n2
+     print(nth,end=' , ')
+     # update values
+     n1 = n2
+     n2 = nth
+     count += 1
+
+
+
+#Write function that reversde the user defined value.
+def reverse_number(number):
+ reverse = 0
+ while(number > 0):
+     remainder = number %10
+     reverse = reverse *10 + remainder
+     number = number // 10
+     print("Reverse number is ", reverse)
+reverse_number(12345)
+
+'''n=int(input("Enter number: "))
+rev=0
+while(n>0):
+    dig=n%10
+    rev=rev*10+dig
+    n=n//10
+print("Reverse of the number:",rev)'''
+
+
+#Python program to check if the number provided by the user is an Armstrong and also write the function for palindrome.
+def armstrong(num):
+ sum=0
+ # find the sum of the cube of each digit
+ temp = num
+ while temp > 0:
+     digit = temp % 10
+     sum += digit ** 3
+     temp //= 10
+ # display the result
+ if num == sum:
+     print(num,"is an Armstrong number")
+ else:
+     print(num,"is not an Armstrong number")
+def palindrome(num):
+ n = num
+ rev = 0
+ while num != 0:
+    rev = rev * 10
+    rev = rev + int(num%10)
+    num = int(num / 10)
+ if n == rev:
+     print(n,"is palindrome number")
+ else:
+     print(n,"is not a palindrome")
+# take input from the user
+num = int(input("Enter a number to chk it is armstrong or not: "))
+armstrong(num)
+# take input from the user
+num = int(input("Enter a number to chk it is palindrome or not: "))
+palindrome(num)
+
+
+
+# Python program to find the factorial of a number using recursion
+def recur_factorial(n):
+ """Function to return the factorial
+ of a number using recursion"""
+ if n == 1:
+     return n
+ else:
+     return n*recur_factorial(n-1)
+#take input from the user
+num = int(input("Enter a number: "))
+# check is the number is negative
+if num < 0:
+ print("Sorry, factorial does not exist for negative numbers")
+elif num == 0:
+ print("The factorial of 0 is 1")
+else:
+ print("The factorial of",num,"is",recur_factorial(num))
+
+
