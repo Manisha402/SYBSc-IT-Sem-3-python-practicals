@@ -1,0 +1,104 @@
+#####Design a calss that store the information osf student and display the same.
+class Student:
+    
+                def init(self,name, sex,course,result):
+                    self.name=name
+                    self.sex=sex
+                    self.course=course
+                    self.result=result
+
+                def display(self, name, sex, course, result):
+                    self.name=name
+                    self.sex=sex
+                    self.course=course
+                    self.result=result
+                    print ('Name:', name)
+                    print ('Sex:',sex)
+                    print ('course:',course)
+                    print ('result:', result)
+
+
+
+
+
+###Implement the concept of inheritance using python.
+class Shape:
+    
+    def init(self,x,y):
+        self.x=x
+        self.y=y
+    def area(self,x,y):
+        self.x=x
+        self.y=y
+        a=self.x*self.y
+        print ('Area of a rectangle',a)
+class Square(Shape): #class Square inherits class Shape.
+    def init(self,x):
+        self.x=x
+        
+    def area(self,x):
+        self.x=x
+        a= self.x*self.x
+        print('Area of a square',a)
+
+
+
+###Create a class called Numbers , which has a single class attributes called MULTIPLIER and a constructor which takes parameter x and y.
+
+class Numbers:
+    
+    #MULTIPLIER = 3.5
+
+    def init(self,x,y):
+        self.x = x
+        self.y = y
+        self.__value ='' 
+        
+
+    def add(self, x, y):
+        self.x=x
+        self.y=y
+        return self.x + self.y
+
+    @classmethod
+    def multiply(self, a):
+        self.a = a
+        MULTIPLIER = 3.5
+        return (MULTIPLIER * self.a)
+
+    @staticmethod
+    def subtract(b, c):
+        return b - c
+ # Using @property decorator 
+    @property
+      
+    # Getter method 
+    def value(self):
+        print("Getting value...")
+        return self.__value 
+      
+    # Setter method 
+    @value.setter 
+    def value(self, xy_tuple):
+        print("Setting value...")
+        self.__value = xy_tuple
+  
+    # Deleter method 
+    @value.deleter 
+    def value(self): 
+       del self.__value
+  
+# Creating object 
+n = Numbers()
+  
+# Setting value 
+n.value = '(3,5)'
+print(n.value)
+# Deletes name 
+#del n.value
+  
+# As name is deleted above this  
+# will throw an error 
+# Prints value 
+print (n.value)
+
