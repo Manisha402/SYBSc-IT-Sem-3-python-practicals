@@ -1,0 +1,53 @@
+#Write a program that takes two lists and returns True if they have at least one common member.
+l1=[1,2,3,4,5,6,]
+l2=[11,12,13,14,15,6]
+for i in l1:
+    for j in l2:
+        if i==j:
+            print ('The 2 lists have at least one common element')
+
+
+
+
+#Write a Python program to print a specified list after removing the 0th,2nd, 4th and 5th elements.
+l1=[1,2,3,4,5,6,7,8,9,0]
+print("Original List is",l1)
+print("According to question we have to remove 0th->1,2nd->3,4th->5,5th->6")
+l1.remove(l1[0]) #this line will remove 1 from the list, Therefore l1[0]=2
+print("After Removal of 0th element Now List is",l1)
+print("Now we have to remove 3 from list which is at 1th position of index")
+l1.remove(l1[1])
+print("After Removal of 1st element of New List (original 2nd index element) is",l1)
+print("Now we have to remove 5 from list which is at 2nd position of index")
+l1.remove(l1[2])
+print("After Removal of 3rd element of New List (original 4th index element) is",l1)
+print("Now we have to remove 6 from list which is at 2nd position of index")
+l1.remove(l1[2])
+print (l1)
+
+
+
+
+#Write a Python program to clone or copy a list.
+l1=[2, 4, 7, 8, 9, 0]
+print ("Original List is", l1)
+l2=l1
+print ("Clone List is ",l2)
+
+old_list = [1, 2, 3]
+new_list = old_list
+
+new_list.append('a')
+
+print('New List:', new_list)
+print('Old List:', old_list)
+
+
+my_list = ['cat', 0, 6.7]
+new_list = my_list.copy()
+print('Copied List:', new_list)
+
+
+
+
+#
